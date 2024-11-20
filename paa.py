@@ -967,11 +967,19 @@ def submit_product():
             INSERT INTO user_products_dup (user_id, product_name, category, price, image, count)
             VALUES (%s, %s, %s, %s, %s, %s)
         """, (user_id, product_name, category, price, image_filename, count))
-
+        print(product_name)
+        # Select the product id
         cursor.execute("""
-            INSERT INTO products (customer_id, product_name, category, price, image)
-            VALUES (%s, %s, %s, %s, %s)
-        """, (user_id, product_name, category, price, image_filename))
+                    SELECT * 
+        FROM user_products
+        ORDER BY product_id DESC
+        LIMIT 1;""")
+        product_id = cursor.fetchone()
+        
+        cursor.execute("""
+            INSERT INTO products (product_id, customer_id, product_name, category, price, image)
+            VALUES (%s, %s, %s, %s, %s, %s)
+        """, (int(product_id[0]), user_id, product_name, category, price, image_filename))
 
         connection.commit()
         cursor.close()
