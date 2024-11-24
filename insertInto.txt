@@ -1,0 +1,10 @@
+INSERT INTO products (product_id, product_name, category, price, image, created_at) VALUES
+(2, 'audi', 'automobiles', 10000.00, '/static/img/automobiles/P1.jpeg', '2024-11-12 22:49:36'),
+(3, 'bmw', 'automobiles', 11000.00, '/static/img/automobiles/P2.jpeg', '2024-11-12 22:50:15'),
+(4, 'bence', 'automobiles', 9000.00, '/static/img/automobiles/P3.jpeg', '2024-11-12 22:50:43'),
+(5, 'sweater', 'clothings', 500.00, '/static/img/clothings/P1.jpeg', '2024-11-12 22:52:13'),
+(6, 'Pinky', 'clothings', 900.00, '/static/img/clothings/P2.jpeg', '2024-11-12 22:52:30'),
+(7, 'Modern', 'clothings', 750.00, '/static/img/clothings/P3.jpeg', '2024-11-12 22:52:52'),
+(8, 'Laptop', 'electronics', 15000.00, '/static/img/electronics/P1.jpg', '2024-11-12 22:53:49'),
+(9, 'PC', 'electronics', 12000.00, '/static/img/electronics/P2.jpeg', '2024-11-12 22:54:02'),
+(10, 'Headphone', 'electronics', 5000.00, '/static/img/electronics/P3.jpg', '2024-11-12 22:54:16');
